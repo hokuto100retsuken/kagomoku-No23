@@ -17,7 +17,8 @@ import {DateTimesComponent} from "./datetimes/datetimes.component"
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    DateTimesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

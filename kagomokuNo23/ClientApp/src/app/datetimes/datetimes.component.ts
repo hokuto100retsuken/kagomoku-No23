@@ -22,7 +22,18 @@ export class DateTimesComponent {
     return target === comparision;
   }
 
-  doComparisionByMoment(target: Date, comparision: Date) {
-    return moment(target) === moment(comparision)
+  doComparisionByMoment(target: Date, comparision: Date): boolean {
+    return moment(target) === moment(comparision);
+  }
+
+  doComparisionByNumber(target: Date, comparision: Date): boolean {
+    console.log(target, comparision);
+    return target.getFullYear() === comparision.getFullYear() &&
+      target.getMonth() === comparision.getMonth() &&
+      target.getDate() === comparision.getDate();
+  }
+
+  doComparisionByMomentIsSame(target: Date, comparision: Date): boolean {
+    return moment(target).isSame(moment(comparision));
   }
 }

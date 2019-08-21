@@ -18,10 +18,19 @@
   <li>
     <p>=== の比較</p>
     <p>Date: {{ targetDate === comparisonDate }}</p>
-    <p>moment: {{ doComparisionByMoment(targetDate, comparisionDate) }}</p>
+    <p>moment: {{ doComparisionByMoment(targetDate, comparisonDate) }}</p>
   </li>
   <li>
-    <p>moment</p>
+    <p>それぞれの数字で比較？</p>
+    <p>{{ doComparisionByNumber(targetDate, comparisonDate) }}</p>
+  </li>
+  <li>
+    <p>引き算で０になったか見る？</p>
+    <p>{{ targetDate - comparisonDate }}</p>
+  </li>
+  <li>
+    <p>moment isSame</p>
+    <p>{{ doComparisionByMomentIsSame(targetDate, comparisonDate) }}</p>
   </li>
 </ul>
 

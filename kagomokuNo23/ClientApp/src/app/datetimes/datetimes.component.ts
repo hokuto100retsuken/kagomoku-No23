@@ -1,6 +1,5 @@
-import {
-  Component
-} from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import * as moment from 'moment';
 
 @Component({
@@ -12,7 +11,8 @@ export class DateTimesComponent {
   public targetDate = new Date(2019, 8, 24);
   public comparisonDate: Date = new Date(2019, 8, 24);
 
-  moment: moment.Moment;
+  date = new FormControl(new Date());
+  serializedDate = new FormControl((new Date()).toISOString());
 
   constructor() {
     

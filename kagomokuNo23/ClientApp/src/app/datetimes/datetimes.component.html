@@ -31,6 +31,16 @@
   <li>
     <p>moment isSame</p>
     <p>{{ doComparisionByMomentIsSame(targetDate, comparisonDate) }}</p>
+
+    <p>足したものを比較すると？</p>
+    <p *ngFor="let momentDay of momentDateList">
+      {{ momentDay }} : {{ doComparisionByMomentIsSameForMoment(targetDate, momentDay)}}
+    </p>
+
+    <p>足したものを比較すると？　その２</p>
+    <p *ngFor="let momentDay of momentDateList">
+      {{ momentDay }} : {{ doComparisionByMomentIsSameForString(targetDate, momentDay.format('YYYY-MM-DD'))}}
+    </p>
   </li>
 </ul>
 
